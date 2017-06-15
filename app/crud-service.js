@@ -1,7 +1,7 @@
 const cote = require('cote')
 
 const crawlResponder = new cote.Responder({
-    name: 'SAS-CRAWL-SERVICE: crawl-responder ',
+    name: 'SAS-CRAWL-SERVICE: crud-responder ',
     namespace: '',
     respondsTo: ['crawl.create', 'crawl.update', 'crawl.get', 'crawl.delete']
 })
