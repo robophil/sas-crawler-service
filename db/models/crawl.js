@@ -2,7 +2,7 @@ const Waterline = require('waterline')
 const config = require('../config')
 
 // Define your collection (aka model) 
-module.exports = Waterline.Collection.extend(Object.assign({
+module.exports = Waterline.Collection.extend(Object.assign(config, {
 
     tableName: 'crawl',
 
@@ -31,7 +31,7 @@ module.exports = Waterline.Collection.extend(Object.assign({
             enum: ['cron', 'human'],
             defaultsTo: 'human'
         },
-        
+
         status: {
             type: 'string',
             enum: ['pending', 'running', 'done'],
@@ -44,4 +44,4 @@ module.exports = Waterline.Collection.extend(Object.assign({
         }
 
     }
-}, config))
+}))
