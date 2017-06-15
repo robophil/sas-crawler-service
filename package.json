@@ -1,0 +1,32 @@
+{
+  "name": "sas-crawler-service",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robophil/sas-crawler-service.git"
+  },
+  "keywords": [
+    "node",
+    "microservice",
+    "cote.js"
+  ],
+  "author": "Balogun Oghenerobo Philip <oghenerobo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Robophil/sas-crawler-service/issues"
+  },
+  "homepage": "https://github.com/Robophil/sas-crawler-service#readme",
+  "dependencies": {
+    "blob": "0.0.4",
+    "cheerio": "^1.0.0-rc.1",
+    "cote": "^0.14.1",
+    "phantom": "^4.0.4",
+    "sails-mongo": "^0.12.2",
+    "waterline": "^0.11.11"
+  }
+}
