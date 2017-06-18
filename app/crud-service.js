@@ -1,6 +1,6 @@
 const cote = require('cote')
 
-const crawlResponder = new cote.Responder({
+const crudResponder = new cote.Responder({
     name: 'SAS-CRAWL-SERVICE: crud-responder ',
     namespace: '',
     respondsTo: ['crawl.create', 'crawl.update', 'crawl.get', 'crawl.delete']
@@ -10,7 +10,7 @@ const crawlResponder = new cote.Responder({
  * Responder: {model, body}
  * Create a crawl. req.body eg {name: 'foo'} is the object to be created
  */
-crawlResponder.on('crawl.create', (req) => {
+crudResponder.on('crawl.create', (req) => {
     switch (req.model) {
         case "crawl": return Crawl.create(req.body)
 
@@ -22,7 +22,7 @@ crawlResponder.on('crawl.create', (req) => {
  * Responder: {model, body}
  * Update a crawl. req.query is an object eg {id: 1}, req.body eg {name: 'foo'} is the object to be updated
  */
-crawlResponder.on('crawl.update', (req) => {
+crudResponder.on('crawl.update', (req) => {
     switch (req.model) {
         case "crawl": return Crawl.update(req.query, req.body)
 
@@ -34,7 +34,7 @@ crawlResponder.on('crawl.update', (req) => {
  * Responder: {model, query}
  * Gets a crawl. req.query is an object eg {id: 1}
  */
-crawlResponder.on('crawl.get', (req) => {
+crudResponder.on('crawl.get', (req) => {
     switch (req.model) {
         case "crawl": return Crawl.get(req.query)
 
@@ -46,7 +46,7 @@ crawlResponder.on('crawl.get', (req) => {
  * Responder: {model, query}
  * Deletes a crawl. req.query is an object eg {id: 1}
  */
-crawlResponder.on('crawl.delete', (req) => {
+crudResponder.on('crawl.delete', (req) => {
     switch (req.model) {
         case "crawl": return Crawl.delete(req.query)
 
